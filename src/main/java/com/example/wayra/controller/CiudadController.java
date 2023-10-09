@@ -1,5 +1,4 @@
-package com.example.wayra.rest;
-
+package com.example.wayra.controller;
 import com.example.wayra.model.Ciudad;
 import com.example.wayra.service.CiudadService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ciudad/")
-public class CiudadREST {
+public class CiudadController {
     @Autowired
     private CiudadService ciudadService;
-
-    @GetMapping
-    public ResponseEntity< List<Ciudad> > getAllCiudades(){
-        return ResponseEntity.ok(ciudadService.findAll());
-    }
 }
