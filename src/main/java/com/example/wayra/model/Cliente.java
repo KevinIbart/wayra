@@ -8,8 +8,8 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "Cliente")
 public class Cliente {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="dniCliente", unique = true, length=8)
     private Integer dniCliente;
 
@@ -23,6 +23,7 @@ public class Cliente {
 
     @Column(name="telefono", nullable = false, unique = true, length=9)
     private String telefono;
+
     @Column(name="direccion", nullable = false, length=100)
     private String direccion;
 
